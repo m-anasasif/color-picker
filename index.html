@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Color Picker from an Image</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Color Picker from an Image</h1>
+
+        <div class="upload-section">
+            <input type="file" id="fileInput" accept="image/*" />
+            <label for="fileInput" class="upload-btn">Upload Image</label>
+        </div>
+
+        <div class="canvas-container">
+            <p id="placeholderText">Upload an image to get started.</p>
+            <canvas id="imageCanvas" class="hidden"></canvas>
+            <div class="magnifier hidden">
+                <canvas id="magnifierCanvas"></canvas>
+            </div>
+        </div>
+
+        <div class="color-info-section hidden" id="colorInfo">
+            <div class="color-preview-box" id="colorPreview"></div>
+            <div class="color-value" id="hexValue" title="Click to copy">HEX: #ffffff</div>
+            <div class="color-value" id="rgbValue" title="Click to copy">RGB: rgb(255, 255, 255)</div>
+            <div class="color-value" id="hslValue" title="Click to copy">HSL: hsl(0, 0%, 100%)</div>
+        </div>
+    </div>
+</body>
+<script src="/script.js"></script>
+</html>
